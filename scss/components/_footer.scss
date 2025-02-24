@@ -1,0 +1,10 @@
+@use '../global/variables' as *;
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    a { 
+        color: $very-dark-cyan; 
+    }
+}

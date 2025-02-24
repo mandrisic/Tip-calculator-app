@@ -1,0 +1,101 @@
+@use '../global/variables' as *;
+@use '../global/mixins' as *;
+
+.input-side {
+    width: 100%;
+    @include respond('tablet', 'laptop', 'desktop'){
+        width: 60em;
+        height: 100%;
+    };
+
+    form {
+        width: 100%;
+        @include flexTemplate(column, space-between, flex-start);
+        gap: 2em;
+        @include respond('tablet', 'laptop', 'desktop'){
+            gap: 2.5em;
+        };
+
+        .customer-container {
+            @include flexTemplate(column, space-between, flex-start);
+            width: 100%;
+            gap: 1em;
+            @include respond('tablet', 'laptop', 'desktop'){
+                gap: .5em;
+            };
+        }
+
+        label {
+            font-size: 1.5rem;
+            font-weight: $weight;
+            @include respond('tablet', 'laptop', 'desktop'){
+                font-size: 1.4rem;
+            };
+        }
+
+        input {
+            width: 100%;
+            padding: .4em;
+            border: none;
+            outline: none;
+            border-radius: .2em;
+            background-color: $very-light-grayish-cyan;
+            color: $very-dark-cyan;
+            font-size: $input;
+            font-weight: $weight;
+            font-family: $font;
+            text-align: right;
+            @include respond('tablet', 'laptop', 'desktop'){
+                padding: .2em .4em;
+            };
+        }
+
+        .tips {
+            @include flexTemplate(row, space-between, flex-start);
+            flex-wrap: wrap;
+            width: 100%;
+
+            .percentage {
+                background-color: $very-dark-cyan;
+                text-align: center;
+                padding: .3em;
+                margin: .3em 0;
+                width: 48%;
+                border-radius: .3em;
+                border: none;
+                font-family: $font;
+                font-size: $input;
+                font-weight: $weight;
+                color: $very-light-grayish-cyan;
+                transition: background-color .3s  color .3s;
+                cursor: pointer;
+                @include respond('tablet', 'laptop', 'desktop'){
+                    width: 31.5%;
+                    font-size: 1.8rem;
+                };
+                
+                &:last-child {
+                    background-color: $very-light-grayish-cyan;
+                    color: $dark-grayish-cyan;
+                }
+            
+                &:hover, &:active, &:focus {
+                    background-color: $primary;
+                    color: $very-dark-cyan;
+                }
+            }
+        }
+
+        .input-field {
+            position: relative;
+            display: inline-block;
+
+            & img {
+                position: absolute;
+                left: 1em;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

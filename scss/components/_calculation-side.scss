@@ -1,0 +1,68 @@
+@use '../global/variables' as *;
+@use '../global/mixins' as *; 
+
+.calculation-side {
+    @include flexTemplate(column, space-between, center);
+    gap: 2.8em;
+    padding: 4em 2.3em 2.3em 2.3em;
+    background-color: $very-dark-cyan;
+    width: 100%;
+    border-radius: 1.5em;
+    @include respond('tablet', 'laptop', 'desktop'){
+        height: 100%;
+        width: 88%;
+    };
+
+    div {
+        width: 100%;
+        @include flexTemplate(column, space-between, center);
+        align-items: stretch;
+        gap: 2.8em;
+    
+        section {
+            @include flexTemplate(row, space-between, center);
+
+            article p {
+                font-size: 1.4rem;
+                color: $grayish-cyan;
+
+                &:first-child {
+                    font-size: 1.6rem;
+                    color: $very-light-grayish-cyan;
+                    @include respond('tablet', 'laptop', 'desktop'){
+                       font-size: 1.4rem;
+                    };
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                color: $primary;
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        text-transform: uppercase;
+        font-family: $font;
+        font-size: 2rem;
+        font-weight: $weight;
+        padding: .4em;
+        background-color: $middle-cyan;
+        color: $very-dark-cyan;
+        border: none;
+        outline: none;
+        border-radius: .25em;
+        transition: background-color .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary;
+        }
+        
+    }
+
+    .onInput {
+        background-color: $primary;
+    }
+}

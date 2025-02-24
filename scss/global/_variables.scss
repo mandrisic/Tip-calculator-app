@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// FONT
+$font: 'Space Mono';
+$weight: 700;
+$input: 2.4rem;
+
+// COLORS 
+$primary: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$middle-cyan: hsl(183, 79%, 24%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+// BREAKPOINTS
+$breakpoints: (
+  "small": 20em,        // 320px
+  "tablet": 48em,       // 768px
+  "laptop": 64em,       // 1024px
+  "desktop": 90em       // 1440px
+);

@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Space Mono";
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(186, 14%, 43%);
+  padding: 1.5em 0;
+  font-weight: 700;
+}
+@media (min-width: 48em) {
+  body {
+    padding: 6em 0;
+  }
+}
+@media (min-width: 64em) {
+  body {
+    padding: 6em 0;
+  }
+}
+@media (min-width: 90em) {
+  body {
+    padding: 6em 0;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  width: 4em;
+  overflow-wrap: break-word;
+  letter-spacing: 0.9rem;
+  font-size: 2.4rem;
+  padding: 0.8em 0;
+}
+@media (min-width: 48em) {
+  h1 {
+    font-size: 2.2rem;
+    width: 5em;
+  }
+}
+@media (min-width: 64em) {
+  h1 {
+    font-size: 2.2rem;
+    width: 5em;
+  }
+}
+@media (min-width: 90em) {
+  h1 {
+    font-size: 2.2rem;
+    width: 5em;
+  }
+}
+
+.calculation-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.8em;
+  padding: 4em 2.3em 2.3em 2.3em;
+  background-color: hsl(183, 100%, 15%);
+  width: 100%;
+  border-radius: 1.5em;
+}
+@media (min-width: 48em) {
+  .calculation-side {
+    height: 100%;
+    width: 88%;
+  }
+}
+@media (min-width: 64em) {
+  .calculation-side {
+    height: 100%;
+    width: 88%;
+  }
+}
+@media (min-width: 90em) {
+  .calculation-side {
+    height: 100%;
+    width: 88%;
+  }
+}
+.calculation-side div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-items: stretch;
+  gap: 2.8em;
+}
+.calculation-side div section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.calculation-side div section article p {
+  font-size: 1.4rem;
+  color: hsl(184, 14%, 56%);
+}
+.calculation-side div section article p:first-child {
+  font-size: 1.6rem;
+  color: hsl(189, 41%, 97%);
+}
+@media (min-width: 48em) {
+  .calculation-side div section article p:first-child {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 64em) {
+  .calculation-side div section article p:first-child {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 90em) {
+  .calculation-side div section article p:first-child {
+    font-size: 1.4rem;
+  }
+}
+.calculation-side div section h2 {
+  font-size: 3rem;
+  color: hsl(172, 67%, 45%);
+}
+.calculation-side button {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Space Mono";
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.4em;
+  background-color: hsl(183, 79%, 24%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  outline: none;
+  border-radius: 0.25em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.calculation-side button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.calculation-side .onInput {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2.8em;
+  width: 100%;
+  height: 100%;
+  min-height: 36.5em;
+  padding: 3.5em;
+  gap: 3em;
+}
+@media (min-width: 48em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 2em;
+    width: 71em;
+    height: 38em;
+    padding: 2.8em;
+  }
+}
+@media (min-width: 64em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 2em;
+    width: 71em;
+    height: 38em;
+    padding: 2.8em;
+  }
+}
+@media (min-width: 90em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 2em;
+    width: 71em;
+    height: 38em;
+    padding: 2.8em;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(183, 100%, 15%);
+}
+
+.input-side {
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .input-side {
+    width: 60em;
+    height: 100%;
+  }
+}
+@media (min-width: 64em) {
+  .input-side {
+    width: 60em;
+    height: 100%;
+  }
+}
+@media (min-width: 90em) {
+  .input-side {
+    width: 60em;
+    height: 100%;
+  }
+}
+.input-side form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+}
+@media (min-width: 48em) {
+  .input-side form {
+    gap: 2.5em;
+  }
+}
+@media (min-width: 64em) {
+  .input-side form {
+    gap: 2.5em;
+  }
+}
+@media (min-width: 90em) {
+  .input-side form {
+    gap: 2.5em;
+  }
+}
+.input-side form .customer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1em;
+}
+@media (min-width: 48em) {
+  .input-side form .customer-container {
+    gap: 0.5em;
+  }
+}
+@media (min-width: 64em) {
+  .input-side form .customer-container {
+    gap: 0.5em;
+  }
+}
+@media (min-width: 90em) {
+  .input-side form .customer-container {
+    gap: 0.5em;
+  }
+}
+.input-side form label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media (min-width: 48em) {
+  .input-side form label {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 64em) {
+  .input-side form label {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 90em) {
+  .input-side form label {
+    font-size: 1.4rem;
+  }
+}
+.input-side form input {
+  width: 100%;
+  padding: 0.4em;
+  border: none;
+  outline: none;
+  border-radius: 0.2em;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  text-align: right;
+}
+@media (min-width: 48em) {
+  .input-side form input {
+    padding: 0.2em 0.4em;
+  }
+}
+@media (min-width: 64em) {
+  .input-side form input {
+    padding: 0.2em 0.4em;
+  }
+}
+@media (min-width: 90em) {
+  .input-side form input {
+    padding: 0.2em 0.4em;
+  }
+}
+.input-side form .tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.input-side form .tips .percentage {
+  background-color: hsl(183, 100%, 15%);
+  text-align: center;
+  padding: 0.3em;
+  margin: 0.3em 0;
+  width: 48%;
+  border-radius: 0.3em;
+  border: none;
+  font-family: "Space Mono";
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(189, 41%, 97%);
+  transition: background-color 0.3s color 0.3s;
+  cursor: pointer;
+}
+@media (min-width: 48em) {
+  .input-side form .tips .percentage {
+    width: 31.5%;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 64em) {
+  .input-side form .tips .percentage {
+    width: 31.5%;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 90em) {
+  .input-side form .tips .percentage {
+    width: 31.5%;
+    font-size: 1.8rem;
+  }
+}
+.input-side form .tips .percentage:last-child {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+.input-side form .tips .percentage:hover, .input-side form .tips .percentage:active, .input-side form .tips .percentage:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.input-side form .input-field {
+  position: relative;
+  display: inline-block;
+}
+.input-side form .input-field img {
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=main.css.map */
