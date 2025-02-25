@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
+  <script src="./main.js" defer></script>
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
@@ -16,25 +17,25 @@
           <label for="bill">Bill</label>
           <div class="input-field">
             <img src="./images/icon-dollar.svg" alt="dollar sign">
-            <input type="number" id="bill" name="bill">
+            <input type="number" class="input" id="bill" name="bill" placeholder="0">
           </div>
         </div>
         <div class="customer-container">
           <label for="tips">Select Tip %</label>
           <div class="tips" id="tips">
-            <button class="percentage">5%</button>
-            <button class="percentage">10%</button>
-            <button class="percentage">15%</button>
-            <button class="percentage">25%</button>
-            <button class="percentage">50%</button>
-            <button class="percentage">Custom</button>
+            <button class="percentage" tabindex="0">5%</button>
+            <button class="percentage" tabindex="0">10%</button>
+            <button class="percentage" tabindex="0">15%</button>
+            <button class="percentage" tabindex="0">25%</button>
+            <button class="percentage" tabindex="0">50%</button>
+            <input type="number" class="percentage" tabindex="0" placeholder="Custom">
           </div>
         </div>
         <div class="customer-container">
           <label for="people">Number of People</label>
           <div class="input-field">
             <img src="./images/icon-person.svg" alt="user sign">
-            <input type="number" id="people" name="people">
+            <input type="number" id="people" class="input" name="people" placeholder="0">
           </div>
         </div>
       </form>
@@ -46,17 +47,17 @@
             <p>Tip Amount</p>
             <p>/ person</p>
           </article>
-          <h2>$0.00</h2>
+          <h2 id="tipAmount">$0.00</h2>
       </section>
       <section>
         <article>
           <p>Total</p>
           <p>/ person</p>
         </article>
-        <h2>$0.00</h2>
+        <h2 id="totalAmount">$0.00</h2>
       </section>
       </div>
-      <button type="reset">Reset</button>
+      <button type="reset" id="reset">Reset</button>
     </div>
   </main>
   <div class="attribution">

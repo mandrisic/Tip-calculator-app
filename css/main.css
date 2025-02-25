@@ -54,19 +54,19 @@ h1 {
 @media (min-width: 48em) {
   h1 {
     font-size: 2.2rem;
-    width: 5em;
+    width: 4.5em;
   }
 }
 @media (min-width: 64em) {
   h1 {
     font-size: 2.2rem;
-    width: 5em;
+    width: 4.5em;
   }
 }
 @media (min-width: 90em) {
   h1 {
     font-size: 2.2rem;
-    width: 5em;
+    width: 4.5em;
   }
 }
 
@@ -335,6 +335,18 @@ h1 {
     padding: 0.2em 0.4em;
   }
 }
+.input-side form input::placeholder {
+  color: hsl(175, 15%, 66%);
+}
+.input-side form input:focus, .input-side form input:active {
+  outline: 1px solid hsl(172, 67%, 45%);
+}
+.input-side form input.invalid {
+  outline: 1px solid red;
+}
+.input-side form input.valid:not(:focus) {
+  outline: none;
+}
 .input-side form .tips {
   display: flex;
   flex-direction: row;
@@ -376,13 +388,23 @@ h1 {
     font-size: 1.8rem;
   }
 }
+.input-side form .tips .percentage:hover, .input-side form .tips .percentage:active, .input-side form .tips .percentage:focus, .input-side form .tips .percentage.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
 .input-side form .tips .percentage:last-child {
   background-color: hsl(189, 41%, 97%);
   color: hsl(186, 14%, 43%);
 }
-.input-side form .tips .percentage:hover, .input-side form .tips .percentage:active, .input-side form .tips .percentage:focus {
-  background-color: hsl(172, 67%, 45%);
+.input-side form .tips .percentage:last-child:hover {
   color: hsl(183, 100%, 15%);
+  outline: 1px solid hsl(172, 67%, 45%);
+}
+.input-side form .tips .percentage:last-child:hover::placeholder {
+  color: hsl(183, 100%, 15%);
+}
+.input-side form .tips .percentage:last-child:active::placeholder, .input-side form .tips .percentage:last-child:focus::placeholder {
+  color: transparent;
 }
 .input-side form .input-field {
   position: relative;
@@ -393,6 +415,28 @@ h1 {
   left: 1em;
   top: 50%;
   transform: translateY(-50%);
+}
+.input-side form .input-field .alert {
+  position: absolute;
+  top: -2.2em;
+  right: 0;
+  font-size: 1.4rem;
+  color: red;
+}
+@media (min-width: 48em) {
+  .input-side form .input-field .alert {
+    top: -1.8em;
+  }
+}
+@media (min-width: 64em) {
+  .input-side form .input-field .alert {
+    top: -1.8em;
+  }
+}
+@media (min-width: 90em) {
+  .input-side form .input-field .alert {
+    top: -1.8em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

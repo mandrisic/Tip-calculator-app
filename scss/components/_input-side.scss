@@ -48,6 +48,21 @@
             @include respond('tablet', 'laptop', 'desktop'){
                 padding: .2em .4em;
             };
+            &::placeholder {
+                color: $grey;
+            }
+
+            &:focus, &:active {
+                outline: 1px solid $primary;
+            }
+
+            &.invalid {
+                outline: 1px solid red;
+            }
+
+            &.valid:not(:focus) {
+                outline: none;
+            }
         }
 
         .tips {
@@ -73,15 +88,27 @@
                     width: 31.5%;
                     font-size: 1.8rem;
                 };
+
+                &:hover, &:active, &:focus, &.selected {
+                    background-color: $primary;
+                    color: $very-dark-cyan;
+                }
                 
                 &:last-child {
                     background-color: $very-light-grayish-cyan;
                     color: $dark-grayish-cyan;
-                }
-            
-                &:hover, &:active, &:focus {
-                    background-color: $primary;
-                    color: $very-dark-cyan;
+                    &:hover {
+                        color: $very-dark-cyan;
+                        outline: 1px solid $primary;
+                        &::placeholder {
+                            color: $very-dark-cyan;
+                        }
+                    } 
+                    &:active, &:focus {
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }  
                 }
             }
         }
@@ -90,11 +117,23 @@
             position: relative;
             display: inline-block;
 
+
             & img {
                 position: absolute;
                 left: 1em;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+
+            .alert {
+                position: absolute;
+                top: -2.2em;
+                right: 0;
+                font-size: 1.4rem;
+                color: red;
+                @include respond('tablet', 'laptop', 'desktop'){
+                    top: -1.8em;
+                };
             }
         }
     }
