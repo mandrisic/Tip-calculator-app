@@ -34,12 +34,17 @@ body {
 }
 @media (min-width: 64em) {
   body {
-    padding: 6em 0;
+    padding: 4em 0;
   }
 }
 @media (min-width: 90em) {
   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 6em 0;
+    height: 100vh;
   }
 }
 
@@ -65,8 +70,8 @@ h1 {
 }
 @media (min-width: 90em) {
   h1 {
-    font-size: 2.2rem;
-    width: 4.5em;
+    position: absolute;
+    top: 12%;
   }
 }
 
